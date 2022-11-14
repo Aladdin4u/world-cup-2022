@@ -1,12 +1,16 @@
 {
   "name": "Tenzies",
+  "homepage": "https://Aladdin4u.github.io/Tenzies.git",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "start": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview --port 8080",
+    "predepoly": "npm run build",
+    "depoly": "gh-pages -d build"
   },
   "dependencies": {
     "nanoid": "^4.0.0",
@@ -18,6 +22,7 @@
     "@types/react": "^18.0.22",
     "@types/react-dom": "^18.0.7",
     "@vitejs/plugin-react": "^2.2.0",
+    "gh-pages": "^4.0.0",
     "vite": "^3.2.0"
   }
 }
