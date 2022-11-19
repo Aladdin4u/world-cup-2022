@@ -1,94 +1,92 @@
 import React, { useEffect, useRef, useState } from 'react'
-import Die from './Die'
-import {nanoid} from 'nanoid'
-import Confetti from 'react-confetti'
+import Navbar from './components/Navbar'
+import Groups from './components/Groups'
+import Standing from './components/Standing'
 
 
 function App() {
-
-  const [dice, setDice] = useState(allNewDice())
-  const [tenzies, setTenzies] = useState(false)
-  const [numRoll, setNumRoll] = useState(0)
-  // const [time, setTime] = useState(0)
-
-  useEffect(() => {
-    const allHeld = dice.every(die => die.isHeld)
-    const firstValue = dice[0].value
-    const allSameValue = dice.every(die => die.value === firstValue)
-    if(allHeld && allSameValue) {
-      setTenzies(true)
-    }
-    
-  }, [dice])
+  const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mzc2ZTc5ZmZkOWFhYzIyNjczOTczMDIiLCJpYXQiOjE2Njg3OTQxNTYsImV4cCI6MTY2ODg4MDU1Nn0.9CgToZP5Pm5FEeraJ1QrJS1m6hU6_GneeeU_73JTB08";
+  const [wc, setWc] = useState([])
   
-  function generateNewDice() {
-    return {
-      value: Math.ceil(Math.random() * 6),
-      isHeld: false,
-      id: nanoid()       
-    }
-  }
 
-  function allNewDice () {
-    const newDice = []
-    for(let i = 0; i < 10; i++) {
-      newDice.push(generateNewDice())
-    }
-    return newDice
-  }
+  
+  
+  // useEffect(() => {
+  //   fetch("http://api.cup2022.ir/api/v1/team",{
+  //       method: "GET",
+  //       headers: {
+  //         "Authorization": `Bearer ${token}`,
+  //         "Content-Type": "application/json",
+  //         "Access-Control-Allow-Origin": "*",
+  //         "Access-Control-Allow-Methods":"POST,PATCH,OPTIONS"
+  //         // "Access-Control-Allow-Credentials": "true"
+  //       },
+        
+  //     })
+  //       .then(res => res.json())
+  //       .then(data => {
+  //         console.log(data)
+  //         setWc(data)
+  //         const team = data.Results
+  //         const home = data.Results[0].Home.TeamName[0].Description
+  //         const away = data.Results[0].Away.TeamName[0].Description
+  //         // const away = data[0].Results.away
+  //         // console.log(`${home} vs ${away}`)
+  //       })
+  // }, [])
 
-  function rollDice() {
-    if(!tenzies) {
-      setDice(oldDice => oldDice.map(die => {
-        return die.isHeld ?
-          die :
-          generateNewDice()
-      }))
-      setNumRoll(prevRoll => (prevRoll + 1))
-    } else {
-      setTenzies(false)
-      setDice(allNewDice())
-    }
-  }
-  
-  function holdDice(id) {
-    setDice(oldDice => oldDice.map(die => {
-      return die.id === id ?
-        {...die, isHeld: !die.isHeld} :
-        die
-    }))
-    
-  }
-   
-  const diceElement = dice.map(die => (
-    <Die 
-      key={die.id} 
-      value={die.value} 
-      isHeld={die.isHeld} 
-      holdDice={() => holdDice(die.id)}
-    />
-  )) 
-  
+  // console.log(wc)
+  // const matches = wc.map(match => (
+  //   <Fixtures
+  //     key={match.id}
+  //     home={match.Home.TeamName[0].Description}
+  //     away={match.Away.TeamName[0].Description}
+  //     homeScore={match.Home.Score}
+  //     awayScore={match.Away.Score}
+  //     stats={match.MatchStatus}
+  //     homeLogo={`${match.Home.isAssociation}`}
+  //     awayLogo={`${match.Away.isAssociation}`}
+  //   />
+  // ))
    
   return (
-    <main>
-      {tenzies && <Confetti />}
-      <h1 className='title'>Tenzies</h1>
-      <p className='instruction'>
-        {tenzies ? `You won with ${numRoll} rolls!` : 
-        "Roll until all dice are the same. Click each die to freeze it at its current value between rolls."}
-        </p>
-      <div className='dice-container'>
-        {diceElement}
-      </div>  
-      <button 
-        className='roll-dice' 
-        onClick={rollDice}
-      >
-        {tenzies ? "New Game" : "Roll"}
-        </button>
-    </main>
+    <div>
+      <Navbar />
+      <main>
+        <aside>
+          <ul>
+            <li>Groups A</li>
+            <li>Groups B</li>
+            <li>Groups C</li>
+            <li>Groups D</li>
+            <li>Groups E</li>
+            <li>Groups F</li>
+            <li>Groups G</li>
+          </ul>
+        </aside>
+        <section>
+          <div>
+            <img src="/wcimage/e08a63142069201.625ffbdb37740.jpg" style={{width:"100%",height:"auto"}}  alt="fifa2022" />
+          </div>
+          <Groups grpTeam="A" />
+          <Groups grpTeam="B" />
+          <Groups grpTeam="C" />
+          <Groups grpTeam="D" />
+          <Groups grpTeam="E" />
+          <Groups grpTeam="F" />
+          <Groups grpTeam="G" />
+          <Groups grpTeam="H" />
+          <Standing grpTeam="A" />
+          <Standing grpTeam="C" />
+          <Standing grpTeam="D" />
+          <Standing grpTeam="E" />
+          <Standing grpTeam="F" />
+          <Standing grpTeam="G" />
+          <Standing grpTeam="H" />
+        </section>
+      </main>
+    </div>
   )
 }
 
-export default App
+export default App;
