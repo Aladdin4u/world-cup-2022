@@ -1,20 +1,17 @@
 import React from "react";
+import Standing from './Standing'
 
 const Table = (props) => {
     return ( 
-        <tbody>
-            <tr>
-                <td><img src={props.flag} alt={props.teamName} className="box-img" />  {props.teamName}</td>
-                <td>{props.MP}</td>
-                <td>{props.W}</td>
-                <td>{props.D}</td>
-                <td>{props.L}</td>
-                <td className="table-point">{props.Pts}</td>
-                <td>{props.GF}</td>
-                <td>{props.GA}</td>
-                <td>{props.GD}</td>
-            </tr>
-        </tbody>
+        <section>
+          <Standing grpTeam="A" />
+          <Standing grpTeam="C" />
+          <Standing grpTeam="D" />
+          <Standing grpTeam="E" />
+          <Standing grpTeam="F" />
+          <Standing grpTeam="G" />
+          <Standing grpTeam="H" />
+        </section> 
      );
 }
  

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Table from "./Table.jsx";
 import standing from '../data/standing.js'
+import Tbody from "./Tbody.jsx";
 
 const Standing = ({grpTeam}) => {
     const [tables, setTables] = useState(standing[0].data)
@@ -9,7 +9,7 @@ const Standing = ({grpTeam}) => {
     const tableElement = tables.filter(table => table.group == el)
         .map(table => table.teams)
         .map(table => table.map(table => (
-        <Table 
+        <Tbody 
             key={table.team_id}
             flag={table.flag}
             teamName={table.name_en}

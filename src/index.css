@@ -29,11 +29,14 @@ nav {
 
 .nav-links {
   display: flex;
-  color: white;
-  list-style: none;
 }
 .nav-link {
   margin: 5px;
+  color: white;
+  text-decoration: none;
+}
+.nav-link:active {
+  border-bottom: 2px solid white;
 }
 .fixture-list {
   display: flex;
@@ -68,6 +71,7 @@ aside {
 }
 section {
   flex-basis: 85%;
+  padding: 20px;
 }
 .group-section{
   background-color: #830542;
