@@ -1,27 +1,25 @@
 {
-  "name": "world-cup-2022",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "wc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "start": "vite",
-    "build": "vite build",
-    "preview": "vite preview --port 8080"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aladdin4u/world-cup-2022.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aladdin4u/world-cup-2022/issues"
+  },
+  "homepage": "https://github.com/Aladdin4u/world-cup-2022#readme",
   "dependencies": {
-    "nanoid": "^4.0.0",
-    "react": "^18.2.0",
-    "react-confetti": "^6.1.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.4.3",
-    "router": "^1.3.7"
-  },
-  "devDependencies": {
-    "@types/react": "^18.0.22",
-    "@types/react-dom": "^18.0.7",
-    "@vitejs/plugin-react": "^2.2.0",
-    "gh-pages": "^4.0.0",
-    "vite": "^3.2.0"
+    "axios": "^1.2.0",
+    "express": "^4.18.2"
   }
 }

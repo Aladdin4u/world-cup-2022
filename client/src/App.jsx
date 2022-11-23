@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Home from './components/Home'
 import Matches from './components/Matches';
 import Table from './components/Table';
+import Live from './components/Live';
 
 
 function App() {
@@ -14,17 +15,7 @@ function App() {
   
   
   // useEffect(() => {
-  //   fetch("http://api.cup2022.ir/api/v1/team",{
-  //       method: "GET",
-  //       headers: {
-  //         "Authorization": `Bearer ${token}`,
-  //         "Content-Type": "application/json",
-  //         "Access-Control-Allow-Origin": "*",
-  //         "Access-Control-Allow-Methods":"POST,PATCH,OPTIONS"
-  //         // "Access-Control-Allow-Credentials": "true"
-  //       },
-        
-  //     })
+  //   fetch("https://api.fifa.com/api/v3/calendar/matches?idseason=255711&idcompetition=17&count=100")
   //       .then(res => res.json())
   //       .then(data => {
   //         console.log(data)
@@ -60,6 +51,7 @@ function App() {
             <Route path="/" element={<Home/>} />
             <Route path="/match" element={<Matches/>} />
             <Route path="/table" element={<Table/>} />
+            <Route path="/live" element={<Live/>} />
             {/* <Route path="*">
               <NotFound />
             </Route> */}
