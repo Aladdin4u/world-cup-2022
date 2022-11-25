@@ -16,5 +16,5 @@ export default defineConfig({
   //   },
   // },
   plugins: [react()],
-  // base: "/world-cup-2022/",
+  base: "/world-cup-2022/",
 });
