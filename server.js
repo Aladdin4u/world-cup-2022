@@ -34,8 +34,8 @@ app.get("/api/register", (req, res) => {
 //next you need to login to get token. You need to call this endpoint 1/24h(bcs every time you are logging in your token changes, your being loggedIn for 24hrs) and store token in some variable.
 app.get("/api/login", (req, res) => {
   const data = JSON.stringify({
-    email: "taofikakinkumi@gmail.com",
-    password: "123456789",
+    email: "userEmail",
+    password: "8CharPwd",
   });
 
   const config = {

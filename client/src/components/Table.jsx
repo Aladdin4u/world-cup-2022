@@ -3,7 +3,7 @@ import Standing from './Standing'
 
 const Table = (props) => {
     return ( 
-        <section>
+        <section  style={{marginTop:"70px"}}>
           <Standing grpTeam="A" />
           <Standing grpTeam="C" />
           <Standing grpTeam="D" />

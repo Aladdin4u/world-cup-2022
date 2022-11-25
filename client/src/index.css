@@ -8,9 +8,12 @@ body {
   font-family: 'Qatar2022 Arabic', sans-serif;
 }
 nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: flex;
   align-items: center;
-  background-color: transparent;
+  background-color: #710C32;
   padding: 40px 25px;
   height: 60px;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
@@ -31,8 +34,9 @@ nav {
   display: flex;
 }
 .nav-link {
-  margin: 5px;
+  margin: 15px;
   color: white;
+  font-size: 20px;
   text-decoration: none;
 }
 .nav-link:active {
@@ -52,6 +56,19 @@ nav {
   align-items: center;
   padding: 8px;
   border-radius: 5px;
+}
+.team-Scorers {
+  display: flex;
+  width: 100%;
+}
+.team-Scorers {
+  flex-basis: 50%;
+  color: white;
+  font-size: 12px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  margin-bottom: 10px;
 }
 .score {
   padding: 8px;
@@ -157,12 +174,32 @@ ul > li {
   display: flex;
   flex-wrap: wrap;
 }
+.rowLive {
+  display: flex;
+  flex-wrap: wrap;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
 .side1 {
   flex: 20%;
   margin-right: 10px;
 }
 .side2 {
   flex: 50%;
+}
+@media (max-width:600px) {
+  .row {
+    flex-direction: column;
+    width: 100%;
+  }
+  .nav-link {
+    font-size: 14px;
+  }
+  .nav--logo_icon {
+    width: 150px;
+  }
 }
 table {
   width: 100%;

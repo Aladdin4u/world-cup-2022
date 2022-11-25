@@ -7,7 +7,7 @@ const Standing = ({grpTeam}) => {
 
     let el = grpTeam
     const tableElement = tables.filter(table => table.group == el)
-        .map(table => table.teams)
+        .map(table => table.teams.sort((a,b) => b.pts - a.pts))
         .map(table => table.map(table => (
         <Tbody 
             key={table.team_id}
@@ -26,7 +26,7 @@ const Standing = ({grpTeam}) => {
 
     return ( 
         <div className="standing-container">
-            <h3 style={{color:"white",margin:0,}}>Teams {grpTeam}</h3>
+            <h3 style={{color:"white",marginBottom:"10px",}}>Teams {grpTeam}</h3>
             <table>
                 <thead>
                     <tr>
