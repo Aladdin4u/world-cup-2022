@@ -65,13 +65,11 @@ const Live = () => {
         <Fixtures 
         key={match._id}
         grpName={match.group}
-        homeImg="wcimage/Spain.png"
-        // {match.home_flag}
+        homeImg={match.home_flag}
         homeName={match.home_team_en}
         homeScore={match.time_elapsed === "notstarted" ? "-" : match.home_score}
         awayScore={match.time_elapsed === "notstarted" ? "-" : match.away_score}
-        awayImg="wcimage/Ghana.png"
-        // {match.away_flag}
+        awayImg={match.away_flag}
         awayName={match.away_team_en}
         playerHome={match.time_elapsed === "notstarted" ? "" : match.home_scorers} 
         playerAway={match.time_elapsed === "notstarted" ? "" : match.away_scorers}
