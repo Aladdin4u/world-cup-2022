@@ -25,24 +25,26 @@ const Standing = ({grpTeam}) => {
     )))
 
     return ( 
-        <div className="standing-container">
+        <div>
             <h3 style={{color:"white",marginBottom:"10px",}}>Teams {grpTeam}</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Team</th>
-                        <th>MP</th>
-                        <th>W</th>
-                        <th>D</th>
-                        <th>L</th>
-                        <th>Pts</th>
-                        <th>GF</th>
-                        <th>GA</th>
-                        <th>GD</th>
-                    </tr>
-                </thead>
-                {tableElement}
-            </table>
+            <div  className="standing-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Team</th>
+                            <th>MP</th>
+                            <th>W</th>
+                            <th>D</th>
+                            <th>L</th>
+                            <th>Pts</th>
+                            <th>GF</th>
+                            <th>GA</th>
+                            <th>GD</th>
+                        </tr>
+                    </thead>
+                    {tableElement}
+                </table>
+            </div>
         </div>
      );
 }
