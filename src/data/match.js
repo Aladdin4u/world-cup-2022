@@ -1,5 +1,5 @@
 export default [
- {
+  {
     "status": "success",
     "data": [
         {
@@ -433,7 +433,7 @@ export default [
             "group": "G",
             "home_score": 1,
             "home_scorers": [
-                "Michy Batshuayi"
+                "Breel Embolo"
             ],
             "home_team_id": "31",
             "id": "16",
@@ -564,12 +564,12 @@ export default [
         },
         {
             "_id": "629c9c8a5749c4077500eae8",
-            "away_score": 0,
+            "away_score": 1,
             "away_scorers": [
-                "null"
+                "Mitchell Duke"
             ],
             "away_team_id": "16",
-            "finished": "FALSE",
+            "finished": "TRUE",
             "group": "D",
             "home_score": 0,
             "home_scorers": [
@@ -581,7 +581,7 @@ export default [
             "matchday": "7",
             "persian_date": "1400-09-05 13:30",
             "stadium_id": "1",
-            "time_elapsed": "notstarted",
+            "time_elapsed": "finished",
             "type": "group",
             "home_team_fa": "تونس",
             "away_team_fa": "استرالیا",
@@ -597,11 +597,11 @@ export default [
                 "null"
             ],
             "away_team_id": "10",
-            "finished": "FALSE",
+            "finished": "TRUE",
             "group": "C",
-            "home_score": 0,
+            "home_score": 2,
             "home_scorers": [
-                "null"
+                "Piotr Zieliński,Robert Lewandowski"
             ],
             "home_team_id": "14",
             "id": "22",
@@ -609,7 +609,7 @@ export default [
             "matchday": "7",
             "persian_date": "1400-09-05 16:30",
             "stadium_id": "1",
-            "time_elapsed": "notstarted",
+            "time_elapsed": "finished",
             "type": "group",
             "home_team_fa": "لهستان",
             "away_team_fa": "عربستان",
@@ -620,16 +620,16 @@ export default [
         },
         {
             "_id": "629c9c8a5749c4077500eaea",
-            "away_score": 0,
+            "away_score": 1,
             "away_scorers": [
-                "null"
+                "Andreas Christensen"
             ],
             "away_team_id": "11",
-            "finished": "FALSE",
+            "finished": "TRUE",
             "group": "D",
-            "home_score": 0,
+            "home_score": 2,
             "home_scorers": [
-                "null"
+                "Breel Embolo,Breel Embolo"
             ],
             "home_team_id": "15",
             "id": "23",
@@ -637,7 +637,7 @@ export default [
             "matchday": "7",
             "persian_date": "1400-09-05 19:30",
             "stadium_id": "1",
-            "time_elapsed": "notstarted",
+            "time_elapsed": "finished",
             "type": "group",
             "home_team_fa": "فرانسه",
             "away_team_fa": "دانمارک",
@@ -653,11 +653,11 @@ export default [
                 "null"
             ],
             "away_team_id": "13",
-            "finished": "FALSE",
+            "finished": "TRUE",
             "group": "C",
-            "home_score": 0,
+            "home_score": 2,
             "home_scorers": [
-                "null"
+                "Lionel Messi,Enzo Fernández"
             ],
             "home_team_id": "9",
             "id": "24",
@@ -665,7 +665,7 @@ export default [
             "matchday": "7",
             "persian_date": "1400-09-05 22:30",
             "stadium_id": "1",
-            "time_elapsed": "notstarted",
+            "time_elapsed": "finished",
             "type": "group",
             "home_team_fa": "آرژانتین",
             "away_team_fa": "مکزیک",
