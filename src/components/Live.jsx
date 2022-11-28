@@ -42,7 +42,7 @@ const Fixtures = (props) => {
 
 const Live = () => {
     const [matches, setMatches] = useState(match[0].data)
-    const [dates, setDates] = useState(8)
+    const [dates, setDates] = useState(9)
     const [hide, setHide] = useState(true)
 
     function addMatchDay() {

@@ -788,16 +788,16 @@ export default [
             },
             {
                 "_id": "629c9c8a5749c4077500eaf0",
-                "away_score": 0,
+                "away_score": 3,
                 "away_scorers": [
-                    "null"
+                    "Jean-Charles Castelletto,Vincent Aboubakar,Eric Maxim Choupo-Moting"
                 ],
                 "away_team_id": "32",
-                "finished": "FALSE",
+                "finished": "TRUE",
                 "group": "G",
-                "home_score": 0,
+                "home_score": 3,
                 "home_scorers": [
-                    "null"
+                    "Strahinja Pavlović,Sergej Milinković-Savić,Aleksandar Mitrović"
                 ],
                 "home_team_id": "26",
                 "id": "29",
@@ -805,7 +805,7 @@ export default [
                 "matchday": "9",
                 "persian_date": "1400-09-07 13:30",
                 "stadium_id": "1",
-                "time_elapsed": "notstarted",
+                "time_elapsed": "finished",
                 "type": "group",
                 "home_team_fa": "صربستان",
                 "away_team_fa": "کامرون",
