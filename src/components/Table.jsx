@@ -5,6 +5,7 @@ const Table = (props) => {
     return ( 
         <section  style={{marginTop:"70px"}}>
           <Standing grpTeam="A" />
+          <Standing grpTeam="B" />
           <Standing grpTeam="C" />
           <Standing grpTeam="D" />
           <Standing grpTeam="E" />
