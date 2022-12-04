@@ -178,6 +178,12 @@ ul > li {
   display: flex;
   flex-wrap: wrap;
 }
+.cards-list {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+  overflow-x: auto;
+}
 .column {
   display: flex;
   flex-direction: column;
@@ -246,6 +252,9 @@ th, td {
   .row {
     flex-direction: column;
     width: 100%;
+  }
+  .cards-list {
+    grid-template-columns: auto;
   }
   .nav-link {
     font-size: 14px;

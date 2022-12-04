@@ -60,7 +60,9 @@ const Round = (props) => {
         <section>
             <div className="column">
                 <h1 style={{color:"white",}}>{props.type}</h1>
-                {matchElement}
+                <div className="cards-list">
+                    {matchElement}
+                </div>
             </div>
         </section>
      );
