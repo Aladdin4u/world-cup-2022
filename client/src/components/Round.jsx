@@ -7,6 +7,7 @@ const Fixtures = (props) => {
         return date.split(" ")[0]
     }
     let date = splitLocalDate(dateArray)
+
     return (
         <>
             <div className='live-list'>
@@ -37,7 +38,14 @@ const Fixtures = (props) => {
 }
 
 const Round = (props) => {
-    const [matches, setMatches] = useState(match[0].data)
+    const [matches, setMatches] = useState([])
+
+    useEffect(() => {
+        const api_url = `http://localhost:3000/api/match`;
+        fetch(api_url)
+        .then(res => res.json())
+        .then(data => setMatches(data.data))
+    },[])
 
     let group = props.group
     const matchElement = matches.filter(match => match.group == group).map(match => (

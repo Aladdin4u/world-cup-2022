@@ -1,5 +1,4 @@
 import React from "react";
-import Live from "./Live";
 import Round from "./Round";
 
 const Home = () => {

@@ -1,27 +1,25 @@
 {
-  "name": "world-cup-2022",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "start": "vite",
-    "build": "vite build",
-    "preview": "vite preview --port 8080"
-  },
   "dependencies": {
-    "nanoid": "^4.0.0",
-    "react": "^18.2.0",
-    "react-confetti": "^6.1.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.4.3",
-    "router": "^1.3.7"
+    "axios": "^1.2.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
   },
-  "devDependencies": {
-    "@types/react": "^18.0.22",
-    "@types/react-dom": "^18.0.7",
-    "@vitejs/plugin-react": "^2.2.0",
-    "gh-pages": "^4.0.0",
-    "vite": "^3.2.0"
-  }
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "wc",
+  "version": "1.0.0",
+  "description": "world cup qata app",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aladdin4u/world-cup-2022.git"
+  },
+  "author": "aladdin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aladdin4u/world-cup-2022/issues"
+  },
+  "homepage": "https://github.com/Aladdin4u/world-cup-2022#readme"
 }
