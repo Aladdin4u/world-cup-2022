@@ -41,7 +41,7 @@ const Round = (props) => {
     const [matches, setMatches] = useState([])
 
     useEffect(() => {
-        const api_url = `http://localhost:3000/api/match`;
+        const api_url = `https://world-cup-2022-ten.vercel.app/api/match`; // Use localhost locally = http://localhost:3000/api/match
         fetch(api_url)
         .then(res => res.json())
         .then(data => setMatches(data.data))
