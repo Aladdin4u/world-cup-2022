@@ -50,7 +50,7 @@ const Round = (props) => {
             const response = await fetch(api_url)
             const data = await response.json()
             setMatches(data.data)
-            console.log(data)
+            // console.log(data)
         }
 
         fetchdata()
