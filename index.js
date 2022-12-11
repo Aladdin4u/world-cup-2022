@@ -60,7 +60,7 @@ app.get("/api/match", async (req, res) => {
   const options = {
     method: "GET",
     headers: {
-      Authorization: tokens,
+      Authorization: token,
       "Content-Type": "application/json",
     },
   };
