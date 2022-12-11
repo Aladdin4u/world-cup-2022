@@ -21,6 +21,8 @@ Utilized callback functions in the server to try and build a modular and scalabl
 ## Installation:
 
 1. Clone repo
+1. run `npm start` // start server
+1. cd client
 1. run `npm intall`
 
 ## Usage:

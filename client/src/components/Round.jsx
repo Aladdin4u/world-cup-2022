@@ -42,10 +42,20 @@ const Round = (props) => {
 
     useEffect(() => {
         const api_url = `https://world-cup-2022-ten.vercel.app/api/match`; // Use localhost locally = http://localhost:3000/api/match
-        fetch(api_url)
-        .then(res => res.json())
-        .then(data => setMatches(data.data))
+        // fetch(api_url)
+        // .then(res => res.json())
+        // .then(data => setMatches(data.data))
+
+        async function fetchdata () {
+            const response = await fetch(api_url)
+            const data = await response.json()
+            setMatches(data.data)
+            // console.log(data)
+        }
+
+        fetchdata()
     },[])
+    
 
     let group = props.group
     const matchElement = matches.filter(match => match.group == group).map(match => (
