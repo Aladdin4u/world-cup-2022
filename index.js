@@ -14,7 +14,9 @@ const { response } = require("express");
 
 app.use(express.static("public"));
 const token =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mzc2ZTc5ZmZkOWFhYzIyNjczOTczMDIiLCJpYXQiOjE2NzA3NjAzOTMsImV4cCI6MTY3MDg0Njc5M30.Mb1gtJlqmKff3V-FieZFuNzaaEUV8KpFaJvopXrPIoA";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mzc2ZTc5ZmZkOWFhYzIyNjczOTczMDIiLCJpYXQiOjE2NzA3NjUxNTksImV4cCI6MTY3MDg1MTU1OX0.i38L6HQoA5ZpBMqzxJ8eJe7MW_6ysci2jeljiG9zG1Y";
+
+var tokens;
 
 app.get("/login", async (req, res) => {
   let user = {
@@ -35,6 +37,7 @@ app.get("/login", async (req, res) => {
   const json = await fetch_response.json();
   res.json(json);
   console.log(json.data.token);
+  tokens = json.data.token;
 });
 
 app.get("/api/standings", async (req, res) => {
@@ -57,7 +60,7 @@ app.get("/api/match", async (req, res) => {
   const options = {
     method: "GET",
     headers: {
-      Authorization: token,
+      Authorization: tokens,
       "Content-Type": "application/json",
     },
   };
