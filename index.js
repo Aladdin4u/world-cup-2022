@@ -14,7 +14,7 @@ const { response } = require("express");
 
 app.use(express.static("public"));
 const token =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mzc2ZTc5ZmZkOWFhYzIyNjczOTczMDIiLCJpYXQiOjE2NzA3Njc5ODIsImV4cCI6MTY3MDg1NDM4Mn0.ME-__8IlkDAPN5qlz5xfbBi84yRnh4FRF3WBfjPC7Qw";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mzc2ZTc5ZmZkOWFhYzIyNjczOTczMDIiLCJpYXQiOjE2NzA5NDA3MTEsImV4cCI6MTY3MTAyNzExMX0.-4ikakxGy9K4aOuA4Gw8800VN1jr7P3wOoWDqgNwNg4";
 
 var tokens;
 
