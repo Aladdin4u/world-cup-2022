@@ -70,7 +70,7 @@ const Round = (props) => {
         awayName={match.away_team_en}
         playerHome={match.time_elapsed === "notstarted" ? "" : match.home_scorers} 
         playerAway={match.time_elapsed === "notstarted" ? "" : match.away_scorers}
-        time={match.time_elapsed === "notstarted" ? match.local_date : match.time_elapsed === "h1" ? "h1" : match.time_elapsed === "h2" ? "h2" : "finished"}
+        time={match.time_elapsed}
     />
     ))
     
