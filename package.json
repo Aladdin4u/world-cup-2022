@@ -10,7 +10,7 @@
   },
   "name": "wc",
   "version": "1.0.0",
-  "description": "world cup qata app",
+  "description": "world cup qatar app",
   "main": "server.js",
   "repository": {
     "type": "git",
